@@ -8,7 +8,7 @@ public class SupplyOperation implements OperationHandler {
     public void apply(FruitTransaction transaction) {
         validateTransaction(transaction);
         if (transaction.getQuantity() <= 0) {
-            throw new RuntimeException("Quantity must be less then 0: "
+            throw new RuntimeException("Quantity must be greater than 0: "
                     + transaction.getQuantity());
         }
         Storage.add(transaction.getFruit(), transaction.getQuantity());
@@ -17,8 +17,8 @@ public class SupplyOperation implements OperationHandler {
     private void validateTransaction(FruitTransaction transaction) {
         if (transaction == null || transaction.getFruit() == null
                 || transaction.getFruit().isBlank()) {
-            throw new RuntimeException("Wrong transaction."
-                    + " Transaction can not to be null or empty.");
+            throw new RuntimeException("Invalid transaction:"
+                    + " Fruit name cannot be null or empty.");
         }
     }
 }

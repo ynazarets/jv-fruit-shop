@@ -1,3 +1,5 @@
+// src/main/java/basesyntax/Main.java
+
 package basesyntax;
 
 import basesyntax.service.common.FruitTransaction;
@@ -18,7 +20,6 @@ import basesyntax.service.shop.ShopService;
 import basesyntax.service.shop.ShopServiceImpl;
 import basesyntax.service.writer.FileWriter;
 import basesyntax.service.writer.FileWriterImpl;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,9 +51,8 @@ public class Main {
             fileWriter.write(report, OUTPUT_FILE_PATH);
             System.out.println("The report is successfully generated into a file: "
                     + OUTPUT_FILE_PATH);
-        } catch (RuntimeException | IOException e) {
-            System.err.println("An error occurred while processing data: " + e.getMessage());
-            e.printStackTrace();
+        } catch (RuntimeException e) {
+            throw new RuntimeException("An error occurred while processing data.", e);
         }
     }
 }

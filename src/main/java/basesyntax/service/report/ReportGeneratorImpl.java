@@ -11,10 +11,10 @@ public class ReportGeneratorImpl implements ReportGenerator {
     public String getReport() {
         Map<String, Integer> fruitStocks = new TreeMap<>(Storage.getFruits());
         StringBuilder reportBuilder = new StringBuilder();
-        reportBuilder.append(REPORT_HEADER).append("\n");
+        reportBuilder.append(REPORT_HEADER).append(System.lineSeparator());
         for (Map.Entry<String, Integer> entry : fruitStocks.entrySet()) {
             reportBuilder.append(entry.getKey()).append(",")
-                    .append(entry.getValue()).append("\n");
+                    .append(entry.getValue()).append(System.lineSeparator());
         }
         return reportBuilder.toString();
     }

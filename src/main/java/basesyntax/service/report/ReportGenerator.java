@@ -1,4 +1,4 @@
-package fruitshop.service.report;
+package basesyntax.service.report;
 
 public interface ReportGenerator {
     String getReport();

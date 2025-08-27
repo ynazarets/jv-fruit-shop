@@ -1,7 +1,7 @@
-package fruitshop.service.writer;
+package basesyntax.service.writer;
 
 import java.io.IOException;
 
-interface FileWriter {
+public interface FileWriter {
     void write(String data, String fileName) throws IOException;
 }

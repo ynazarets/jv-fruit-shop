@@ -1,4 +1,4 @@
-package fruitshop.service.common;
+package basesyntax.service.common;
 
 public class FruitTransaction {
     private final Operation operation;
@@ -45,7 +45,7 @@ public class FruitTransaction {
                     return op;
                 }
             }
-            throw new IllegalArgumentException("Неизвестный код операции: " + code);
+            throw new IllegalArgumentException("Invalid code operation " + code);
         }
     }
 }

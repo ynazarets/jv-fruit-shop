@@ -1,7 +1,7 @@
-package fruitshop.service.shop;
+package basesyntax.service.shop;
 
-import fruitshop.service.common.FruitTransaction;
-import fruitshop.service.handler.OperationHandler;
+import basesyntax.service.common.FruitTransaction;
+import basesyntax.service.handler.OperationHandler;
 import java.util.List;
 
 public class ShopServiceImpl implements ShopService {

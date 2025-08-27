@@ -1,11 +1,12 @@
-package fruitshop.service.shop;
+package basesyntax.service.shop;
 
-import fruitshop.service.common.FruitTransaction;
-import fruitshop.service.handler.OperationHandler;
+import basesyntax.service.common.FruitTransaction;
+import basesyntax.service.handler.OperationHandler;
 import java.util.Map;
 
 public class OperationStrategyImpl implements OperationStrategy {
-    private final Map<FruitTransaction.Operation, OperationHandler> operationHandlers;
+    private final Map<FruitTransaction.Operation,
+            OperationHandler> operationHandlers;
 
     public OperationStrategyImpl(Map<FruitTransaction.Operation,
             OperationHandler> operationHandlers) {
@@ -16,8 +17,8 @@ public class OperationStrategyImpl implements OperationStrategy {
     public OperationHandler getOperationHandler(FruitTransaction.Operation operation) {
         OperationHandler handler = operationHandlers.get(operation);
         if (handler == null) {
-            throw new IllegalArgumentException("Do not have Handler for this operation: "
-                    + operation.name());
+            throw new IllegalArgumentException("Не найден обработчик для операции: "
+                    + operation);
         }
         return handler;
     }

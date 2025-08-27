@@ -1,9 +1,9 @@
-package basesyntax.service.handler;
+package basesyntax.strategy;
 
-import basesyntax.service.common.FruitTransaction;
-import basesyntax.storage.Storage;
+import basesyntax.common.FruitTransaction;
+import basesyntax.db.Storage;
 
-public class ReturnOperation implements OperationHandler {
+public class SupplyOperation implements OperationHandler {
     @Override
     public void apply(FruitTransaction transaction) {
         validateTransaction(transaction);
@@ -17,8 +17,8 @@ public class ReturnOperation implements OperationHandler {
     private void validateTransaction(FruitTransaction transaction) {
         if (transaction == null || transaction.getFruit() == null
                 || transaction.getFruit().isBlank()) {
-            throw new RuntimeException("Invalid transaction: "
-                    + "Fruit name cannot be null or empty.");
+            throw new RuntimeException("Invalid transaction:"
+                    + " Fruit name cannot be null or empty.");
         }
     }
 }

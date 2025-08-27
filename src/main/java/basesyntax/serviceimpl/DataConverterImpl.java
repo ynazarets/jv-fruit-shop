@@ -1,8 +1,8 @@
-package basesyntax.service.converter;
+package basesyntax.serviceimpl;
 
-import basesyntax.service.common.FruitTransaction;
+import basesyntax.common.FruitTransaction;
+import basesyntax.service.DataConverter;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class DataConverterImpl implements DataConverter {
     private static final int VALID_COLUMN_COUNT = 3;
@@ -44,6 +44,6 @@ public class DataConverterImpl implements DataConverter {
                             quantity
                     );
                 })
-                .collect(Collectors.toList());
+                .toList();
     }
 }

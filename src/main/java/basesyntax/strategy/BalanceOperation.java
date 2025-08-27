@@ -1,7 +1,7 @@
-package basesyntax.service.handler;
+package basesyntax.strategy;
 
-import basesyntax.service.common.FruitTransaction;
-import basesyntax.storage.Storage;
+import basesyntax.common.FruitTransaction;
+import basesyntax.db.Storage;
 
 public class BalanceOperation implements OperationHandler {
 

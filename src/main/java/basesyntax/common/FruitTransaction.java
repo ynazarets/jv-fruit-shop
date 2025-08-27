@@ -1,4 +1,4 @@
-package basesyntax.service.common;
+package basesyntax.common;
 
 public class FruitTransaction {
     private final Operation operation;

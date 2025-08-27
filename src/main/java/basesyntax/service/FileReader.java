@@ -1,4 +1,4 @@
-package basesyntax.service.reader;
+package basesyntax.service;
 
 import java.util.List;
 

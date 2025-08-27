@@ -1,4 +1,4 @@
-package basesyntax.service.writer;
+package basesyntax.service;
 
 public interface FileWriter {
     void write(String data, String fileName);

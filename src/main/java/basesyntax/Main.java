@@ -48,7 +48,8 @@ public class Main {
             shopService.process(transactions);
             String report = reportGenerator.getReport();
             fileWriter.write(report, OUTPUT_FILE_PATH);
-            System.out.println("The report is successfully generated into a file: " + OUTPUT_FILE_PATH);
+            System.out.println("The report is successfully generated into a file: "
+                    + OUTPUT_FILE_PATH);
         } catch (RuntimeException | IOException e) {
             System.err.println("An error occurred while processing data: " + e.getMessage());
             e.printStackTrace();

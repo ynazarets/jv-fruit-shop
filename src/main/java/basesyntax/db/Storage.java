@@ -23,6 +23,10 @@ public class Storage {
     }
 
     public static Map<String, Integer> getFruits() {
-        return new HashMap<>(fruits);
+        return fruits;
+    }
+
+    public static void clear() {
+        fruits.clear();
     }
 }
